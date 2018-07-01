@@ -1,16 +1,16 @@
 //
-//  ConnectionListViewController.swift
+//  ConnectionViewController.swift
 //  MyConnections
 //
-//  Created by BokChangsoon on 2018. 6. 20..
+//  Created by BokChangsoon on 2018. 6. 23..
 //  Copyright © 2018년 FineSoft.net. All rights reserved.
 //
 
 import UIKit
-import ContactsUI
 
-class ConnectionListViewController: UITableViewController, CNContactPickerDelegate {
+class ConnectionViewController: UITableViewController {
     var connections:[String] = ["test","hahaha"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,28 +19,12 @@ class ConnectionListViewController: UITableViewController, CNContactPickerDelega
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        if #available(iOS 11, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-        }
-    }
+        
+   }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func showContactsUI(_ sender: Any) {
-        let contactPickerViewController = CNContactPickerViewController()
-        
-        contactPickerViewController.delegate = self
-        
-        present(contactPickerViewController, animated: true, completion: nil)
-    }
-    
-    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        print(contact)
-        connections.append(contact.givenName)
-        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -55,16 +39,22 @@ class ConnectionListViewController: UITableViewController, CNContactPickerDelega
         return connections.count
     }
 
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "connectionListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "connectionCell", for: indexPath)
 
         // Configure the cell...
+
         cell.textLabel!.text = connections[indexPath.row]
-
+        
         return cell
+        
     }
-    
 
+    @IBAction func unwindToConnection(segue:UIStoryboardSegue) {
+        print(segue)
+    
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -100,20 +90,14 @@ class ConnectionListViewController: UITableViewController, CNContactPickerDelega
     }
     */
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "ConnectionSegue" {
-            if let destination = segue.destination as? ConnectionViewController{
-                if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
-                    destination.title = "haha"
-                }
-            }
-        }
     }
+    */
 
 }

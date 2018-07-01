@@ -10,6 +10,9 @@
 		A1FB1F8A235B0D1C8A36C46D /* Pods_MyConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1EDB8FB8D79456507C296E /* Pods_MyConnections.framework */; };
 		DC82CDAA20D2C25500CFC2C4 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82CDA920D2C25500CFC2C4 /* ContactsUI.framework */; };
 		DCB9BB8E20DA9B2F001F33C1 /* ConnectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB9BB8D20DA9B2F001F33C1 /* ConnectionListViewController.swift */; };
+		DCE7BFDC20DDF2E3001200CB /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE7BFDB20DDF2E3001200CB /* ConnectionViewController.swift */; };
+		DCE7BFDE20DE33E8001200CB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE7BFDD20DE33E8001200CB /* Models.swift */; };
+		DCE7BFE020DE975C001200CB /* CallAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE7BFDF20DE975C001200CB /* CallAddViewController.swift */; };
 		DCFE456F20D2BE510077D95A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE456E20D2BE510077D95A /* AppDelegate.swift */; };
 		DCFE457120D2BE510077D95A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE457020D2BE510077D95A /* ViewController.swift */; };
 		DCFE457420D2BE510077D95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFE457220D2BE510077D95A /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 		DC82CDA920D2C25500CFC2C4 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		DC82CDAB20D2C3F200CFC2C4 /* Pods-MyConnections */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Pods-MyConnections"; path = "Pods/Target Support Files/Pods-MyConnections"; sourceTree = "<group>"; };
 		DCB9BB8D20DA9B2F001F33C1 /* ConnectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionListViewController.swift; sourceTree = "<group>"; };
+		DCE7BFDB20DDF2E3001200CB /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		DCE7BFDD20DE33E8001200CB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DCE7BFDF20DE975C001200CB /* CallAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAddViewController.swift; sourceTree = "<group>"; };
 		DCFE456B20D2BE510077D95A /* MyConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFE456E20D2BE510077D95A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFE457020D2BE510077D95A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +95,10 @@
 				DCFE456E20D2BE510077D95A /* AppDelegate.swift */,
 				DCFE457020D2BE510077D95A /* ViewController.swift */,
 				DCFE457220D2BE510077D95A /* Main.storyboard */,
+				DCE7BFDF20DE975C001200CB /* CallAddViewController.swift */,
+				DCE7BFDB20DDF2E3001200CB /* ConnectionViewController.swift */,
 				DCB9BB8D20DA9B2F001F33C1 /* ConnectionListViewController.swift */,
+				DCE7BFDD20DE33E8001200CB /* Models.swift */,
 				DCFE457520D2BE530077D95A /* Assets.xcassets */,
 				DCFE457720D2BE530077D95A /* LaunchScreen.storyboard */,
 				DCFE457A20D2BE530077D95A /* Info.plist */,
@@ -190,9 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE7BFDC20DDF2E3001200CB /* ConnectionViewController.swift in Sources */,
 				DCFE457120D2BE510077D95A /* ViewController.swift in Sources */,
+				DCE7BFE020DE975C001200CB /* CallAddViewController.swift in Sources */,
 				DCFE456F20D2BE510077D95A /* AppDelegate.swift in Sources */,
 				DCB9BB8E20DA9B2F001F33C1 /* ConnectionListViewController.swift in Sources */,
+				DCE7BFDE20DE33E8001200CB /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

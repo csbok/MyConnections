@@ -14,10 +14,10 @@ class ViewController: UIViewController, CNContactPickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        /*
         if #available(iOS 11, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
